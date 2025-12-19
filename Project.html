@@ -30,9 +30,25 @@
                              <b>Project Images</b>
                         </div>
                         <div class="col-12 mt-3">
-                            <div class="row justify-content-center">
-                                <div class="col-12 col-md-6">
-                                    <img src="./assets/img/Afjal.jpg" alt="Not Found" class="img-fluid rounded">
+                            <div class="row justify-content-center g-3">
+                                <!-- Image list -->
+                                <div class="col-12 col-md-4">
+                                    <img src="./assets/img/project/Projectone_1.png" alt="Project 1" class="img-fluid rounded project-img" style="cursor:pointer;">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <img src="./assets/img/project/Projectone_2.png" alt="Project 2" class="img-fluid rounded project-img" style="cursor:pointer;">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <img src="./assets/img/project/Projectone_3.png" alt="Project 3" class="img-fluid rounded project-img" style="cursor:pointer;">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <img src="./assets/img/project/Projectone_4.png" alt="Project 4" class="img-fluid rounded project-img" style="cursor:pointer;">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <img src="./assets/img/project/Projectone_5.png" alt="Project 5" class="img-fluid rounded project-img" style="cursor:pointer;">
+                                </div>
+                                <div class="col-12 col-md-4">
+                                    <img src="./assets/img/project/Projectone_6.png" alt="Project 6" class="img-fluid rounded project-img" style="cursor:pointer;">
                                 </div>
                             </div>
                         </div>
@@ -41,5 +57,32 @@
            </div>
         </div>
     </div>
+
+    <!-- Modal for Zoom -->
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-body p-0">
+            <img src="" class="img-fluid w-100" id="modalImage" alt="Zoomed Image">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+        // Select all project images
+        const projectImages = document.querySelectorAll('.project-img');
+        const modalImage = document.getElementById('modalImage');
+
+        projectImages.forEach(img => {
+            img.addEventListener('click', () => {
+                modalImage.src = img.src; // Set clicked image src to modal
+            });
+        });
+    </script>
+
 </body>
 </html>
