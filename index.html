@@ -34,7 +34,27 @@
 
     footer { background: #222; color: white; text-align: center; padding: 50px 0; }  
     .social-icons a { color: white; margin: 0 15px; font-size: 28px; transition: 0.3s; }  
-    .social-icons a:hover { color: #4facfe; }  
+    .social-icons a:hover { color: #4facfe; } 
+.rating input{
+display:none;
+}
+
+.rating label{
+font-size:35px;
+color:#ccc;
+cursor:pointer;
+transition:0.3s;
+}
+
+.rating input:checked ~ label{
+color:#ffc107;
+}
+
+.rating label:hover,
+.rating label:hover ~ label{
+color:#ffc107;
+}
+ 
     </style>  
 </head>  
 <body>  
@@ -349,60 +369,53 @@
 
 </section> --> 
 
-<section class="container py-5">
+<div class="container py-5">
 
-<h2 class="section-title">Rate My Portfolio</h2>
+<h2 class="text-center mb-4">Rate My Portfolio</h2>
 
 <div class="row justify-content-center">
+<div class="col-md-5">
 
-<div class="col-md-6">
+<div class="card shadow p-4 text-center">
 
-<div class="custom-card text-center">
+<h5 class="mb-3">Give Your Rating</h5>
 
-<h5>Give Rating</h5>
+<div class="rating d-flex justify-content-center flex-row-reverse mb-3">
 
-<div class="mb-3">
+<input type="radio" name="rate" id="star5" value="5">
+<label for="star5">★</label>
 
-<i class="fa fa-star star" data-value="1"></i>
-<i class="fa fa-star star" data-value="2"></i>
-<i class="fa fa-star star" data-value="3"></i>
-<i class="fa fa-star star" data-value="4"></i>
-<i class="fa fa-star star" data-value="5"></i>
+<input type="radio" name="rate" id="star4" value="4">
+<label for="star4">★</label>
+
+<input type="radio" name="rate" id="star3" value="3">
+<label for="star3">★</label>
+
+<input type="radio" name="rate" id="star2" value="2">
+<label for="star2">★</label>
+
+<input type="radio" name="rate" id="star1" value="1">
+<label for="star1">★</label>
 
 </div>
 
-<textarea
-id="feedback"
-class="form-control mb-3"
-placeholder="Write feedback">
-</textarea>
+<textarea id="feedback" class="form-control mb-3" rows="3" placeholder="Write feedback"></textarea>
 
-<button class="btn btn-primary" onclick="submitRating()">
-Submit
+<button onclick="submitRating()" class="btn btn-primary w-100">
+Submit Rating
 </button>
 
 <hr>
 
-<h6>
-Average Rating :
-<span id="avg">0</span> ⭐
-</h6>
+<p>Average Rating: <span id="avg">0</span> ⭐</p>
+<p>Total Ratings: <span id="total">0</span></p>
 
-<h6>
-Total Ratings :
-<span id="total">0</span>
-</h6>
-
-<div id="feedbackList" class="text-start mt-3"></div>
+<div id="feedbackList"></div>
 
 </div>
-
 </div>
-
 </div>
-
-</section>
-
+</div>
  
         <footer>  
             <div class="container">  
@@ -437,55 +450,31 @@ Total Ratings :
         </footer>
 
 <!-- JAVASCRIPT -->
-
 <script>
-
-let rating = 0
-
-const stars = document.querySelectorAll(".star")
-
-stars.forEach(star => {
-
-star.addEventListener("click",function(){
-
-rating = this.getAttribute("data-value")
-
-stars.forEach(s => s.classList.remove("active"))
-
-for(let i=0;i<rating;i++){
-stars[i].classList.add("active")
-}
-
-})
-
-})
 
 function submitRating(){
 
-if(rating==0){
+let selected = document.querySelector('input[name="rate"]:checked')
 
+if(!selected){
 alert("Please select rating")
-
 return
-
 }
 
+let rating = selected.value
 let feedback = document.getElementById("feedback").value
 
 let ratings = JSON.parse(localStorage.getItem("ratings")) || []
 
 ratings.push({
-rating:rating,
-message:feedback
+rating: rating,
+message: feedback
 })
 
-localStorage.setItem("ratings",JSON.stringify(ratings))
+localStorage.setItem("ratings", JSON.stringify(ratings))
 
 document.getElementById("feedback").value=""
-
-rating=0
-
-stars.forEach(s=>s.classList.remove("active"))
+selected.checked=false
 
 loadRatings()
 
@@ -496,10 +485,8 @@ function loadRatings(){
 let ratings = JSON.parse(localStorage.getItem("ratings")) || []
 
 let total = ratings.length
-
 let sum = 0
-
-let html = ""
+let html=""
 
 ratings.forEach(r=>{
 
@@ -524,7 +511,9 @@ document.getElementById("feedbackList").innerHTML = html
 
 loadRatings()
 
-</script>  
+</script>
+
+
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>  
     </body>  
 </html>  
