@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Afjal Sheikh | Full Stack Developer Portfolio</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+font-family:Segoe UI;
+background:#f5f7fb;
+scroll-behavior:smooth;
+}
+
+.navbar{
+background:linear-gradient(90deg,#4facfe,#00f2fe);
+}
+
+.navbar a{
+color:white !important;
+}
+
+.hero{
+height:80vh;
+background:linear-gradient(120deg,#4facfe,#00f2fe);
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+}
+
+.hero h1{
+font-size:60px;
+font-weight:bold;
+}
+
+.section-title{
+text-align:center;
+font-weight:bold;
+margin-bottom:50px;
+}
+
+.custom-card{
+background:white;
+padding:30px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+.project-img{
+width:100%;
+height:200px;
+object-fit:cover;
+border-radius:15px;
+margin-bottom:20px;
+}
+
+.star{
+font-size:35px;
+cursor:pointer;
+color:#ccc;
+}
+
+.star.active{
+color:gold;
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:50px 0;
+}
+
+.social-icons a{
+color:white;
+margin:0 15px;
+font-size:28px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+
+<div class="container">
+
+<a class="navbar-brand fw-bold">AFJAL SHEIKH</a>
+
+</div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div>
+
+<h1>Hi, I'm Afjal Sheikh</h1>
+
+<p class="fs-4">
+MCA Student | Full Stack Web Developer | PHP & .NET Expert
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="container py-5">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="custom-card text-center">
+
+<p>
+I am a passionate Full Stack Developer skilled in React JS,
+PHP and .NET Core APIs. I enjoy building scalable web applications
+and modern digital products.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section class="container py-5">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="row g-4">
+
+<div class="col-md-6">
+
+<div class="custom-card">
+
+<img src="https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=600" class="project-img">
+
+<h5>Inventory Management System</h5>
+
+<p>
+Garment inventory system built with ASP.NET Core API
+and Microsoft SQL Server.
+</p>
+
+<a href="https://github.com/Afjaluddin24" class="btn btn-dark">
+GitHub Code
+</a>
+
+</div>
+
+</div>
+
+
+<div class="col-md-6">
+
+<div class="custom-card">
+
+<img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=600" class="project-img">
+
+<h5>Dolphin AI</h5>
+
+<p>
+AI dashboard interface built using React JS
+with real time data visualization.
+</p>
+
+<a href="https://github.com/Afjaluddin24" class="btn btn-dark">
+GitHub Code
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ⭐ PORTFOLIO RATING -->
+
+<section class="container py-5">
+
+<h2 class="section-title">Rate My Portfolio</h2>
+
+<div class="row justify-content-center">
+
+<div class="col-md-6">
+
+<div class="custom-card text-center">
+
+<h5>Give Rating</h5>
+
+<div class="mb-3">
+
+<i class="fa fa-star star" data-value="1"></i>
+<i class="fa fa-star star" data-value="2"></i>
+<i class="fa fa-star star" data-value="3"></i>
+<i class="fa fa-star star" data-value="4"></i>
+<i class="fa fa-star star" data-value="5"></i>
+
+</div>
+
+<textarea
+id="feedback"
+class="form-control mb-3"
+placeholder="Write feedback">
+</textarea>
+
+<button class="btn btn-primary" onclick="submitRating()">
+Submit
+</button>
+
+<hr>
+
+<h6>
+Average Rating :
+<span id="avg">0</span> ⭐
+</h6>
+
+<h6>
+Total Ratings :
+<span id="total">0</span>
+</h6>
+
+<div id="feedbackList" class="text-start mt-3"></div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<h4 class="fw-bold mb-4">AFJAL SHEIKH</h4>
+
+<div class="social-icons">
+
+<a href="https://github.com/Afjaluddin24">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://linkedin.com">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="#">
+<i class="fab fa-youtube"></i>
+</a>
+
+</div>
+
+<p class="mt-4">
+© 2026 Full Stack Developer Portfolio
+</p>
+
+</div>
+
+</footer>
+
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+let rating = 0
+
+const stars = document.querySelectorAll(".star")
+
+stars.forEach(star => {
+
+star.addEventListener("click",function(){
+
+rating = this.getAttribute("data-value")
+
+stars.forEach(s => s.classList.remove("active"))
+
+for(let i=0;i<rating;i++){
+stars[i].classList.add("active")
+}
+
+})
+
+})
+
+function submitRating(){
+
+if(rating==0){
+
+alert("Please select rating")
+
+return
+
+}
+
+let feedback = document.getElementById("feedback").value
+
+let ratings = JSON.parse(localStorage.getItem("ratings")) || []
+
+ratings.push({
+rating:rating,
+message:feedback
+})
+
+localStorage.setItem("ratings",JSON.stringify(ratings))
+
+document.getElementById("feedback").value=""
+
+rating=0
+
+stars.forEach(s=>s.classList.remove("active"))
+
+loadRatings()
+
+}
+
+function loadRatings(){
+
+let ratings = JSON.parse(localStorage.getItem("ratings")) || []
+
+let total = ratings.length
+
+let sum = 0
+
+let html = ""
+
+ratings.forEach(r=>{
+
+sum += parseInt(r.rating)
+
+html += `
+<div class="border p-2 mb-2 rounded">
+⭐ ${r.rating}/5
+<p>${r.message}</p>
+</div>
+`
+
+})
+
+let avg = total ? (sum/total).toFixed(1) : 0
+
+document.getElementById("avg").innerText = avg
+document.getElementById("total").innerText = total
+document.getElementById("feedbackList").innerHTML = html
+
+}
+
+loadRatings()
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
