@@ -54,6 +54,28 @@ color:#ffc107;
 .rating label:hover ~ label{
 color:#ffc107;
 }
+
+.rating-box{
+background:white;
+padding:20px;
+border-radius:12px;
+transition:0.3s;
+border:1px solid #eee;
+}
+
+.rating-box:hover{
+transform:scale(1.08);
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.rating-box h6{
+color:#6c757d;
+font-weight:600;
+}
+
+.rating-box h4{
+font-weight:bold;
+}
  
     </style>  
 </head>  
@@ -407,10 +429,28 @@ Submit Rating
 
 <hr>
 
-<p>Average Rating: <span id="avg">0</span> ⭐</p>
-<p>Total Ratings: <span id="total">0</span></p>
+<<div class="row mt-4 text-center">
 
-<div id="feedbackList"></div>
+<div class="col-6">
+<div class="rating-box shadow-sm">
+<h6>Average Rating</h6>
+<h4 class="text-warning">
+<span id="avg">0</span> ⭐
+</h4>
+</div>
+</div>
+
+<div class="col-6">
+<div class="rating-box shadow-sm">
+<h6>Total Ratings</h6>
+<h4 class="text-primary">
+<span id="total">0</span>
+</h4>
+</div>
+</div>
+
+</div>
+// <div id="feedbackList"></div>
 
 </div>
 </div>
