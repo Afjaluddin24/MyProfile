@@ -51,87 +51,194 @@
     <meta name="geo.position" content="22.3039;70.8022">
     <meta name="ICBM" content="22.3039, 70.8022">
 
-    <!-- ===================== STRUCTURED DATA: Person (JSON-LD) ===================== -->
+    <!-- ================================================================
+         STRUCTURED DATA — RICH GOOGLE KNOWLEDGE PANEL
+         Includes: Person · WebSite · Projects · Education ·
+                   Certifications · Skills · Contact · Breadcrumb · FAQ
+         ================================================================ -->
+
+    <!-- 1. PERSON — Full profile with address, phone, social, skills -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
+      "@id": "https://afjalsheikhdev.netlify.app/#person",
       "name": "Afjal Sheikh",
-      "alternateName": "Afjaluddin Sheikh",
+      "alternateName": ["Afjaluddin Sheikh", "Afjal Sheikh Developer", "Afjaluddin24"],
       "url": "https://afjalsheikhdev.netlify.app/",
-      "image": "https://afjalsheikhdev.netlify.app/assets/img/Afjal.png",
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://afjalsheikhdev.netlify.app/assets/img/Afjal.png",
+        "width": 800,
+        "height": 800,
+        "caption": "Afjal Sheikh - Full Stack Developer"
+      },
+      "description": "Afjal Sheikh is a Full Stack Developer and MCA student at CHARUSAT University, Gujarat, India. Specializes in PHP, React JS, ASP.NET Core REST APIs, MySQL, MongoDB, and MS SQL Server. Available for internship and job opportunities.",
+      "jobTitle": "Full Stack Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "CHARUSAT University",
+        "url": "https://www.charusat.ac.in/"
+      },
+      "telephone": "+91-9016281460",
+      "email": "afjaluddin24@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Rajkot",
+        "addressRegion": "Gujarat",
+        "addressCountry": "IN",
+        "postalCode": "360001"
+      },
+      "nationality": {
+        "@type": "Country",
+        "name": "India"
+      },
+      "gender": "Male",
+      "birthPlace": {
+        "@type": "Place",
+        "name": "Gujarat, India"
+      },
       "sameAs": [
         "https://github.com/Afjaluddin24",
         "https://www.linkedin.com/in/shekh-afjaluddin-573600360",
         "https://www.youtube.com/@shekhafjal5350",
-        "https://wa.me/919016281460"
+        "https://wa.me/919016281460",
+        "https://afjalsheikhdev.netlify.app/"
       ],
-      "jobTitle": "Full Stack Developer",
-      "description": "Full Stack Developer and MCA student at CHARUSAT University specializing in PHP, React JS, .NET Core, MySQL, MongoDB and MS SQL Server.",
-      "telephone": "+91-9016281460",
       "knowsAbout": [
         "PHP Development",
         "React JS",
-        ".NET Core",
-        "ASP.NET Core REST API",
-        "MySQL",
+        "ASP.NET Core",
+        ".NET Core REST API",
+        "MySQL Database",
         "MongoDB",
         "MS SQL Server",
-        "Bootstrap",
+        "Bootstrap 5",
         "JavaScript",
-        "Entity Framework",
-        "Git",
-        "GitHub"
+        "Entity Framework Core",
+        "Git Version Control",
+        "GitHub",
+        "HTML5",
+        "CSS3",
+        "AJAX",
+        "jQuery",
+        "Full Stack Web Development",
+        "Database Design",
+        "ERP Systems",
+        "Software Engineering"
+      ],
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "GitHub Foundations Certification",
+          "credentialCategory": "Certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "GitHub"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "MongoDB Associate Developer Certification",
+          "credentialCategory": "Certificate",
+          "recognizedBy": {
+            "@type": "Organization",
+            "name": "MongoDB"
+          }
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Java Programming Certification",
+          "credentialCategory": "Certificate"
+        }
       ],
       "alumniOf": [
         {
           "@type": "CollegeOrUniversity",
           "name": "CHARUSAT University",
-          "url": "https://www.charusat.ac.in/"
+          "url": "https://www.charusat.ac.in/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Anand",
+            "addressRegion": "Gujarat",
+            "addressCountry": "IN"
+          }
         },
         {
           "@type": "CollegeOrUniversity",
-          "name": "VNSGU Surat",
-          "url": "https://www.vnsgu.ac.in/"
+          "name": "Veer Narmad South Gujarat University (VNSGU)",
+          "url": "https://www.vnsgu.ac.in/",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Surat",
+            "addressRegion": "Gujarat",
+            "addressCountry": "IN"
+          }
         }
       ],
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Gujarat",
-        "addressCountry": "IN"
+      "seeks": {
+        "@type": "Demand",
+        "name": "Internship or Full-Time Job as Full Stack Developer",
+        "description": "Afjal Sheikh is actively seeking internship or full-time employment as a Full Stack Developer in India."
       }
     }
     </script>
 
-    <!-- ===================== STRUCTURED DATA: WebSite (JSON-LD) ===================== -->
+    <!-- 2. WEBSITE — Enables Google Sitelinks Search Box -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Afjal Sheikh Portfolio",
+      "@id": "https://afjalsheikhdev.netlify.app/#website",
+      "name": "Afjal Sheikh — Full Stack Developer Portfolio",
+      "alternateName": "Afjal Sheikh Dev",
       "url": "https://afjalsheikhdev.netlify.app/",
-      "description": "Portfolio website of Afjal Sheikh - Full Stack Developer and MCA student at CHARUSAT University.",
-      "author": {
-        "@type": "Person",
-        "name": "Afjal Sheikh"
-      },
+      "description": "Official portfolio of Afjal Sheikh, Full Stack Developer and MCA student at CHARUSAT University. View projects, skills, certifications and contact information.",
       "inLanguage": "en-IN",
+      "author": { "@id": "https://afjalsheikhdev.netlify.app/#person" },
+      "creator": { "@id": "https://afjalsheikhdev.netlify.app/#person" },
+      "copyrightHolder": { "@id": "https://afjalsheikhdev.netlify.app/#person" },
       "copyrightYear": 2026,
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-05-27",
       "potentialAction": {
         "@type": "SearchAction",
-        "target": "https://afjalsheikhdev.netlify.app/?s={search_term_string}",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://afjalsheikhdev.netlify.app/?s={search_term_string}"
+        },
         "query-input": "required name=search_term_string"
       }
     }
     </script>
 
-    <!-- ===================== STRUCTURED DATA: ItemList – Projects (JSON-LD) ===================== -->
+    <!-- 3. WEBPAGE — The main portfolio page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfilePage",
+      "@id": "https://afjalsheikhdev.netlify.app/#webpage",
+      "name": "Afjal Sheikh | Full Stack Developer Portfolio",
+      "url": "https://afjalsheikhdev.netlify.app/",
+      "isPartOf": { "@id": "https://afjalsheikhdev.netlify.app/#website" },
+      "about": { "@id": "https://afjalsheikhdev.netlify.app/#person" },
+      "description": "Portfolio website of Afjal Sheikh showcasing projects, skills, education and certifications.",
+      "inLanguage": "en-IN",
+      "datePublished": "2025-01-01",
+      "dateModified": "2026-05-27",
+      "breadcrumb": { "@id": "https://afjalsheikhdev.netlify.app/#breadcrumb" }
+    }
+    </script>
+
+    <!-- 4. PROJECTS — SoftwareApplication rich results -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "ItemList",
-      "name": "Afjal Sheikh Projects",
-      "description": "Portfolio projects developed by Afjal Sheikh",
+      "@id": "https://afjalsheikhdev.netlify.app/#projects",
+      "name": "Afjal Sheikh — Featured Projects",
+      "description": "Portfolio projects developed by Afjal Sheikh, Full Stack Developer",
+      "numberOfItems": 3,
       "itemListElement": [
         {
           "@type": "ListItem",
@@ -139,10 +246,21 @@
           "item": {
             "@type": "SoftwareApplication",
             "name": "Dolphin-AI",
-            "description": "A sophisticated AI interface featuring real-time data visualization, built with React JS frontend and Microsoft SQL Server backend.",
+            "alternateName": "Dolphin AI 2026",
+            "description": "A sophisticated AI interface featuring real-time data visualization. Built with React JS frontend and Microsoft SQL Server backend for high-performance AI interactions.",
             "url": "https://frabjous-pasca-21fca6.netlify.app",
+            "sameAs": "https://github.com/Afjaluddin24/Dolphin-AI-2026",
             "applicationCategory": "WebApplication",
-            "programmingLanguage": ["React JS", "MS SQL Server", "REST API"]
+            "operatingSystem": "Web Browser",
+            "programmingLanguage": ["React JS", "MS SQL Server", "REST API", "JavaScript"],
+            "author": { "@id": "https://afjalsheikhdev.netlify.app/#person" },
+            "dateCreated": "2026-01-01",
+            "image": "https://afjalsheikhdev.netlify.app/assets/img/project/Project2_1.png",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR"
+            }
           }
         },
         {
@@ -151,10 +269,20 @@
           "item": {
             "@type": "SoftwareApplication",
             "name": "Inventory Management System",
-            "description": "Enterprise resource planning tool built with ASP.NET Core REST APIs and MS SQL Server.",
+            "alternateName": "ERP Inventory System",
+            "description": "Enterprise resource planning tool built with ASP.NET Core REST APIs and MS SQL Server for seamless, scalable inventory data handling and reporting.",
             "url": "https://github.com/Afjaluddin24/Inventory-Management-System",
-            "applicationCategory": "WebApplication",
-            "programmingLanguage": [".NET Core", "MS SQL Server", "ERP"]
+            "sameAs": "https://github.com/Afjaluddin24/Inventory-Management-System",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web Browser",
+            "programmingLanguage": ["ASP.NET Core", "MS SQL Server", "C#", "Entity Framework"],
+            "author": { "@id": "https://afjalsheikhdev.netlify.app/#person" },
+            "image": "https://afjalsheikhdev.netlify.app/assets/img/project/Projectone_1.png",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR"
+            }
           }
         },
         {
@@ -162,31 +290,209 @@
           "position": 3,
           "item": {
             "@type": "SoftwareApplication",
-            "name": "Food Bill Inventory",
-            "description": "ERP with GST calculation and sales dashboard built using ASP.NET Core, Entity Framework, AJAX, and jQuery.",
+            "name": "Food Bill Inventory System",
+            "alternateName": "Food Billing ERP with GST",
+            "description": "ERP with GST calculation and a sales dashboard built using ASP.NET Core, Entity Framework, AJAX, and jQuery for a seamless billing experience.",
             "url": "https://github.com/Afjaluddin24/Food_Billing_System_MCA_Case_Study",
-            "applicationCategory": "WebApplication",
-            "programmingLanguage": [".NET Core", "jQuery", "AJAX", "Entity Framework"]
+            "sameAs": "https://github.com/Afjaluddin24/Food_Billing_System_MCA_Case_Study",
+            "applicationCategory": "BusinessApplication",
+            "operatingSystem": "Web Browser",
+            "programmingLanguage": ["ASP.NET Core", "jQuery", "AJAX", "Entity Framework", "C#"],
+            "author": { "@id": "https://afjalsheikhdev.netlify.app/#person" },
+            "image": "https://afjalsheikhdev.netlify.app/assets/img/project/Projcet3.png",
+            "offers": {
+              "@type": "Offer",
+              "price": "0",
+              "priceCurrency": "INR"
+            }
           }
         }
       ]
     }
     </script>
 
-    <!-- ===================== STRUCTURED DATA: BreadcrumbList (JSON-LD) ===================== -->
+    <!-- 5. EDUCATION — EducationalOccupationalProgram rich results -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "@id": "https://afjalsheikhdev.netlify.app/#education",
+      "name": "Afjal Sheikh — Education",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "EducationalOccupationalProgram",
+            "name": "Master of Computer Applications (MCA)",
+            "description": "Advanced study in software engineering, enterprise architectures, cloud computing, and modern web development paradigms.",
+            "provider": {
+              "@type": "CollegeOrUniversity",
+              "name": "CHARUSAT University",
+              "url": "https://www.charusat.ac.in/",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Anand",
+                "addressRegion": "Gujarat",
+                "addressCountry": "IN"
+              }
+            },
+            "programPrerequisites": "Bachelor of Computer Applications",
+            "occupationalCategory": "Software Development",
+            "timeToComplete": "P2Y",
+            "offers": {
+              "@type": "Offer",
+              "category": "Ongoing"
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "EducationalOccupationalProgram",
+            "name": "Bachelor of Computer Applications (BCA)",
+            "description": "Solid foundation in programming, data structures, object-oriented design, and software development lifecycle. CGPA: 6.24",
+            "provider": {
+              "@type": "CollegeOrUniversity",
+              "name": "Veer Narmad South Gujarat University (VNSGU)",
+              "url": "https://www.vnsgu.ac.in/",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Surat",
+                "addressRegion": "Gujarat",
+                "addressCountry": "IN"
+              }
+            },
+            "timeToComplete": "P3Y",
+            "offers": {
+              "@type": "Offer",
+              "category": "Completed"
+            }
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- 6. FAQ — Frequently Asked Questions (shows as expandable FAQ in Google) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Afjal Sheikh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Afjal Sheikh (Afjaluddin Sheikh) is a Full Stack Developer and MCA student at CHARUSAT University, Gujarat, India. He specializes in PHP, React JS, ASP.NET Core REST APIs, MySQL, MongoDB, and MS SQL Server. He is available for internship and job opportunities."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What technologies does Afjal Sheikh know?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Afjal Sheikh is skilled in: React JS (80%), PHP (85%), ASP.NET Core / .NET Core REST API (75%), Bootstrap & UI/UX (90%), Java (70%), SQL & Database Design (82%), MySQL, MongoDB (certified), MS SQL Server, JavaScript, Entity Framework, Git, and GitHub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What projects has Afjal Sheikh built?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Afjal Sheikh has built: 1) Dolphin-AI — a React JS + MS SQL Server AI interface (live at https://frabjous-pasca-21fca6.netlify.app), 2) Inventory Management System — an ASP.NET Core ERP tool, 3) Food Bill Inventory System — an ERP with GST calculation built using ASP.NET Core, jQuery, and AJAX. All projects are available on GitHub at https://github.com/Afjaluddin24."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What certifications does Afjal Sheikh have?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Afjal Sheikh holds: GitHub Foundations Certification, MongoDB Associate Developer Certification, and Java Programming Certification."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact Afjal Sheikh?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can contact Afjal Sheikh via: Phone/WhatsApp: +91 9016281460, LinkedIn: https://www.linkedin.com/in/shekh-afjaluddin-573600360, GitHub: https://github.com/Afjaluddin24, YouTube: https://www.youtube.com/@shekhafjal5350, or through the contact form on his portfolio website: https://afjalsheikhdev.netlify.app/"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is Afjal Sheikh available for jobs or internships?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes! Afjal Sheikh is actively looking for Full Stack Developer internship or full-time job opportunities. He is based in Gujarat, India and can be contacted at +91 9016281460 or via his LinkedIn profile."
+          }
+        }
+      ]
+    }
+    </script>
+
+    <!-- 7. BREADCRUMB — Navigation path for Google Sitelinks -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
+      "@id": "https://afjalsheikhdev.netlify.app/#breadcrumb",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home",           "item": "https://afjalsheikhdev.netlify.app/#home" },
-        { "@type": "ListItem", "position": 2, "name": "About",          "item": "https://afjalsheikhdev.netlify.app/#about" },
-        { "@type": "ListItem", "position": 3, "name": "Education",      "item": "https://afjalsheikhdev.netlify.app/#education" },
-        { "@type": "ListItem", "position": 4, "name": "Projects",       "item": "https://afjalsheikhdev.netlify.app/#projects" },
-        { "@type": "ListItem", "position": 5, "name": "Certifications", "item": "https://afjalsheikhdev.netlify.app/#certifications" },
-        { "@type": "ListItem", "position": 6, "name": "Skills",         "item": "https://afjalsheikhdev.netlify.app/#skills" },
-        { "@type": "ListItem", "position": 7, "name": "Contact",        "item": "https://afjalsheikhdev.netlify.app/#contact" }
+        { "@type": "ListItem", "position": 1, "name": "Home",           "item": "https://afjalsheikhdev.netlify.app/" },
+        { "@type": "ListItem", "position": 2, "name": "About Me",       "item": "https://afjalsheikhdev.netlify.app/#about" },
+        { "@type": "ListItem", "position": 3, "name": "Resume",         "item": "https://afjalsheikhdev.netlify.app/#resume" },
+        { "@type": "ListItem", "position": 4, "name": "Education",      "item": "https://afjalsheikhdev.netlify.app/#education" },
+        { "@type": "ListItem", "position": 5, "name": "Projects",       "item": "https://afjalsheikhdev.netlify.app/#projects" },
+        { "@type": "ListItem", "position": 6, "name": "Certifications", "item": "https://afjalsheikhdev.netlify.app/#certifications" },
+        { "@type": "ListItem", "position": 7, "name": "Skills",         "item": "https://afjalsheikhdev.netlify.app/#skills" },
+        { "@type": "ListItem", "position": 8, "name": "Databases",      "item": "https://afjalsheikhdev.netlify.app/#databases" },
+        { "@type": "ListItem", "position": 9, "name": "Contact",        "item": "https://afjalsheikhdev.netlify.app/#contact" }
       ]
+    }
+    </script>
+
+    <!-- 8. CONTACT PAGE — Explicit contact info for Google -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      "name": "Contact Afjal Sheikh",
+      "url": "https://afjalsheikhdev.netlify.app/#contact",
+      "description": "Get in touch with Afjal Sheikh, Full Stack Developer from Gujarat, India.",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Afjal Sheikh",
+        "telephone": "+91-9016281460",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rajkot",
+          "addressRegion": "Gujarat",
+          "addressCountry": "IN"
+        },
+        "contactPoint": [
+          {
+            "@type": "ContactPoint",
+            "telephone": "+91-9016281460",
+            "contactType": "personal",
+            "availableLanguage": ["English", "Hindi", "Gujarati"],
+            "areaServed": "IN"
+          },
+          {
+            "@type": "ContactPoint",
+            "url": "https://wa.me/919016281460",
+            "contactType": "WhatsApp",
+            "availableLanguage": ["English", "Hindi", "Gujarati"]
+          },
+          {
+            "@type": "ContactPoint",
+            "url": "https://www.linkedin.com/in/shekh-afjaluddin-573600360",
+            "contactType": "LinkedIn",
+            "availableLanguage": ["English"]
+          }
+        ]
+      }
     }
     </script>
 
