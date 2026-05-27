@@ -1,0 +1,11 @@
+# robots.txt — Afjal Sheikh Portfolio
+# Allow all search engines to crawl and index
+
+User-agent: *
+Allow: /
+
+# Sitemap location — VERY IMPORTANT for Google
+Sitemap: https://afjalsheikhdev.netlify.app/sitemap.xml
+
+# Crawl-delay (optional, good practice)
+Crawl-delay: 5
