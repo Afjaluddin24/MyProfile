@@ -1,0 +1,11 @@
+# robots.txt — Afjal Sheikh Portfolio
+# Allow all search engines to crawl and index everything
+
+User-agent: *
+Allow: /
+
+# Sitemap location — Crucial for search engines to discover your layout
+Sitemap: https://afjalsheikhdev.netlify.app/sitemap.xml
+
+# Crawl-delay gives crawlers a tiny pause to prevent heavy scraping loads
+Crawl-delay: 5
