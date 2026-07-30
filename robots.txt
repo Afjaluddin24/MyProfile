@@ -5,7 +5,7 @@ User-agent: *
 Allow: /
 
 # Sitemap location — Crucial for search engines to discover your layout
-Sitemap: https://afjalsheikhdev.netlify.app/sitemap.xml
+Sitemap: https://my-profile-ashy-five.vercel.app/sitemap.xml
 
 # Crawl-delay gives crawlers a tiny pause to prevent heavy scraping loads
 Crawl-delay: 5
